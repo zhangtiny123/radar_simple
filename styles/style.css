@@ -33,3 +33,8 @@ td{
 	background-color:#ecf7fe;
  	text-align:center;
 }
+
+#chartdiv{
+    background-image: url("../images/background-blue.jpg");
+    width:1300px; height:700px;
+}

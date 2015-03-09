@@ -63,7 +63,7 @@ AmCharts.ready(function () {
         },
         {
             "text": "暂缓",
-            "x": 532,
+            "x": 528,
             "y": 580
         }
     ];

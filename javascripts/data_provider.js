@@ -1,6 +1,6 @@
 var radarData = [
     {
-        "category": "tools",
+        "category": "",
         "value": "1",
         "name": "grunt",
         "description": "已经被广泛使用的前端构建工具"
@@ -90,13 +90,13 @@ var radarData = [
         "description": "虽然还是会用到maven仓库，但是gradle比起maven在很多方面有了改进，配置文件看起来清爽了很多"
     },
     {
-        "category": "",
+        "category": "tools",
         "value": "17",
         "name": "docker",
         "description": "docker是一个开源应用容器，让开发者可以将应用和依赖全部打包到一个可移植的容器中，发布到任意Linux机器上"
     },
     {
-        "category": "language_framework",
+        "category": "",
         "value": "1",
         "name": "spring-framework",
         "description": "spring框架"
@@ -168,13 +168,13 @@ var radarData = [
         "description": "Flight.js是一个极其轻量级的框架，只需要很少的工作量就能在DOM节点添加行为，它有事件驱动和基于组件的特点"
     },
     {
-        "category": "",
+        "category": "language_framework",
         "value": "18",
         "name": "AngularJs 2.0",
         "description": "并没有提供一套从angular.js 1.x 迁移到angular.js 2.0的方法，并且还处在开发当中，时间也许会帮助更多的开发者接受它"
     },
     {
-        "category": "tech",
+        "category": "",
         "value": "1",
         "name": "TDD",
         "description": "测试驱动开发，敏捷团队通常都采用这种方式来开发代码"
@@ -223,13 +223,13 @@ var radarData = [
     },
     {
         "category": "",
-        "value": "1",
+        "value": "3",
         "name": "solr",
         "description": "apache一个开源的搜索服务器"
     },
     {
         "category": "",
-        "value": "2",
+        "value": "4",
         "name": "现行CSS样式指南",
         "description": "styleguide保证合作开发过程中样式的一致性"
     },
@@ -282,13 +282,13 @@ var radarData = [
         "description": "DevOps不是一个工作角色，而是一种旨在鼓励运维专家和开发人员紧密协作的文化运动。我们建议您不要创建这样一个独立团队，那可能会让您吞下康威定律引发的苦果，而应该将这些技术嵌入团队，通过消除摩擦来强化反馈回路，疏通沟通路径"
     },
     {
-        "category": "",
+        "category": "tech",
         "value": "18",
         "name": "测试作为独立的组织",
         "description": "采用独立的QA团队会减慢反馈的速度，忘记”我们“的观念，代之以”我们和他们“的观念，让软件质量提升变得更为困难。测试应该是一个紧密集成的活动，团队不能对其进行外包。我们建议采用”一体化团队“，让测试人员与开发人员紧密协作"
     },
     {
-        "category": "platform",
+        "category": "",
         "value": "2",
         "name": "AWS",
         "description": "亚马逊云计算平台"
@@ -306,7 +306,7 @@ var radarData = [
         "description": "CoreOS 是一个被设计为运行大型的、可扩展的系统的 Linux 发 行版。部署在一个 CoreOS 实例上的所有应用程序都运行在单 独的 Docker 容器中,并且 CoreOS 还提供了一套工具来帮助管 理它们,包括 etcd —— 它们自己的分布式配置存储"
     },
     {
-        "category": "",
+        "category": "platform",
         "value": "13",
         "name": "MarialDB",
         "description": "MariaDB是一个由社区开发的且仅支 持 GPL 软件许可的 MySQL 分支。它旨在保持开源的纯粹性, 在完全兼容 MySQL 的同时,又具有与之匹敌的竞争力"
