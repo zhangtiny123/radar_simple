@@ -26,53 +26,60 @@ AmCharts.ready(function () {
     // GRAPH
     var graph = new AmCharts.AmGraph();
     graph.lineColor = "#FFCC00";
-    graph.fillAlphas = 0.2;
-    graph.bullet = "round";
+    graph.fillAlphas = 0;
+    graph.bullet = "triangleUp";
+    graph.bulletBorderThickness = 2;
+    graph.bulletBorderColor = "#000000";
+    graph.bulletBorderAlpha = 0.5;
+    graph.lineAlpha = 0;
     graph.valueField = "value";
     graph.balloonText = "[[name]]: [[description]]";
     chart.addGraph(graph);
 
     // GUIDES
-    var guide = new AmCharts.Guide();
-    guide.angle = 0;
-    guide.tickLength = 0;
-    guide.toAngle = 360;
-    guide.value = 0;
-    guide.toValue = 5;
-    guide.fillColor = "DimGray";
-    guide.fillAlpha = 0.6;
-    valueAxis.addGuide(guide);
+    valueAxis.addGuide(getGuide(0,360,0,5,"DimGray",0.6));
 
-    guide = new AmCharts.Guide();
-    guide.angle = 0;
-    guide.tickLength = 0;
-    guide.toAngle = 360;
-    guide.value = 5;
-    guide.toValue = 10;
-    guide.fillColor = "Gray";
-    guide.fillAlpha = 0.6;
-    valueAxis.addGuide(guide);
+    valueAxis.addGuide(getGuide(0, 360, 5, 10, "Gray", 0.6));
 
-    guide = new AmCharts.Guide();
-    guide.angle = 0;
-    guide.tickLength = 0;
-    guide.toAngle = 360;
-    guide.value = 10;
-    guide.toValue = 15;
-    guide.fillColor = "DarkGray";
-    guide.fillAlpha = 0.6;
-    valueAxis.addGuide(guide);
+    valueAxis.addGuide(getGuide(0, 360, 10, 15, "DarkGray", 0.6));
 
-    guide = new AmCharts.Guide();
-    guide.angle = 0;
-    guide.tickLength = 0;
-    guide.toAngle = 360;
-    guide.value = 15;
-    guide.toValue = 20;
-    guide.fillColor = "Silver";
-    guide.fillAlpha = 0.6;
-    valueAxis.addGuide(guide);
+    valueAxis.addGuide(getGuide(0, 360, 15, 20, "Silver", 0.6));
+
+    chart.allLabels = [
+        {
+            "text": "采用",
+            "x": 622,
+            "y": 410
+        },
+        {
+            "text": "试验",
+            "x": 592,
+            "y": 460
+        },
+        {
+            "text": "评估",
+            "x": 560,
+            "y": 520
+        },
+        {
+            "text": "暂缓",
+            "x": 532,
+            "y": 580
+        }
+    ];
 
     // WRITE
     chart.write("chartdiv");
 });
+
+function getGuide(startAngle, toAngle, value, toValue, fillColor, fillAlpha) {
+    var guide = new AmCharts.Guide();
+    guide.angle = startAngle;
+    guide.tickLength = 0;
+    guide.toAngle = toAngle;
+    guide.value = value;
+    guide.toValue = toValue;
+    guide.fillColor = fillColor;
+    guide.fillAlpha = fillAlpha;
+    return guide;
+}
