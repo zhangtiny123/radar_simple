@@ -1,7 +1,6 @@
 var chart;
 
 AmCharts.ready(function () {
-    // RADAR CHART
     chart = new AmCharts.AmRadarChart();
     chart.dataProvider = radarData;
     chart.categoryField = "category";
@@ -9,10 +8,8 @@ AmCharts.ready(function () {
     chart.radius = "40%";
     chart.realRadius = 20;
 
-    // TITLE
     chart.addTitle("CI-PKG TECH RADAR", 15);
 
-    // VALUE AXIS
     var valueAxis = new AmCharts.ValueAxis();
     valueAxis.gridType = "circles";
     valueAxis.fillAlpha = 0.05;   //圆环内部颜色的深浅 1黑色  0白色
@@ -23,7 +20,6 @@ AmCharts.ready(function () {
     valueAxis.minimum = 0;
     chart.addValueAxis(valueAxis);
 
-    // GRAPH
     var graph = new AmCharts.AmGraph();
     graph.lineColor = "#FFCC00";
     graph.fillAlphas = 0;
@@ -36,7 +32,6 @@ AmCharts.ready(function () {
     graph.balloonText = "[[name]]: [[description]]";
     chart.addGraph(graph);
 
-    // GUIDES
     valueAxis.addGuide(getGuide(0,360,0,5,"DimGray",0.6));
 
     valueAxis.addGuide(getGuide(0, 360, 5, 10, "Gray", 0.6));
@@ -68,7 +63,6 @@ AmCharts.ready(function () {
         }
     ];
 
-    // WRITE
     chart.write("chartdiv");
 });
 
